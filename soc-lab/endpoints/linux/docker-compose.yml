@@ -1,0 +1,12 @@
+services:
+  linux-endpoint:
+    build: .
+    hostname: linux-endpoint-01
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:2222:22"   # SSH target, localhost only
+    networks:
+      - wazuh_default
+networks:
+  wazuh_default:
+    external: true

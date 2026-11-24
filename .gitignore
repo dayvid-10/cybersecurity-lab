@@ -1,0 +1,11 @@
+# Never commit TLS keys or certs generated for Wazuh
+soc-lab/wazuh/config/wazuh_indexer_ssl_certs/
+*.pem
+*.key
+.DS_Store
+
+# Local secrets
+.env
+!.env.example
+soc-lab/wazuh/config/wazuh_dashboard/wazuh.yml
+soc-lab/wazuh/config/wazuh_indexer/internal_users.yml
